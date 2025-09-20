@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puretress | Premium Hair Oil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Premium Color Palette */
+        :root {
+            --dark-green: #1a3a2e;
+            --light-green: #2d5a4d;
+            --gold: #d4af37;
+            --light-gold: #e6c767;
+            --dark-text: #333;
+            --light-text: #555;
+            --white: #ffffff;
+            --light-bg: #f5f5f5;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, rgba(26, 58, 46, 0.95), rgba(26, 58, 46, 0.9)), url('https://z-cdn-media.chatglm.cn/files/e51f4875-9443-4a4b-8705-99f611a29594_WhatsApp%20Image%202025-09-19%20at%2009.49.31_ecae0436.jpg?auth_key=1789795042-f5e3db2536ee4815b1f28d7d829cefd0-0-d17d9f7d3b24f2c3cc2f5985388a8084');
+            background-size: cover;
+            background-position: center;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 1px;
+        }
+        
+        .logo i {
+            color: var(--gold);
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: var(--gold);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://z-cdn-media.chatglm.cn/files/4b8ed5ff-61ad-4ed6-9460-ca1dc60e4c47_k.png?auth_key=1789890490-e3433ca7be064ae2b7e12685dfcdf4cd-0-fcecd9f2564d667de8fa7c7e0cd5b39a');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            color: var(--white);
+        }
+        
+        .hero-tagline {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--light-gold);
+            margin-bottom: 30px;
+            white-space: nowrap;
+            text-align: center;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: var(--gold);
+            color: var(--dark-green);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn:hover {
+            background: var(--light-gold);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+        
+        /* Product Section */
+        .product {
+            padding: 100px 0;
+            text-align: center;
+            background: var(--white);
+        }
+        
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--dark-green);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gold);
+        }
+        
+        .product-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 60px;
+        }
+        
+        .product-image {
+            flex: 1;
+            padding-right: 50px;
+        }
+        
+        .product-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .product-text {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .product-text h3 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--dark-green);
+        }
+        
+        .product-text p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            color: var(--light-text);
+        }
+        
+        .price {
+            font-size: 2rem;
+            color: var(--gold);
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        .product-features {
+            margin-top: 30px;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .feature i {
+            color: var(--gold);
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .feature p {
+            margin: 0;
+            font-weight: 500;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 100px 0;
+            background: var(--light-bg);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .benefit-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .benefit-card i {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-green);
+        }
+        
+        .benefit-card p {
+            color: var(--light-text);
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            padding: 100px 0;
+            background: var(--white);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 60px;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background: var(--light-bg);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .testimonial-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .testimonial-card:before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--gold);
+            opacity: 0.2;
+            font-family: serif;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--light-text);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--dark-green);
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        /* WhatsApp Feedback Section */
+        .whatsapp-feedback {
+            padding: 100px 0;
+            background: var(--white);
+        }
+        
+        .whatsapp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .whatsapp-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .whatsapp-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .whatsapp-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 3px solid var(--light-gold);
+        }
+        
+        .whatsapp-content {
+            padding: 20px;
+        }
+        
+        .whatsapp-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark-green);
+            margin-bottom: 10px;
+        }
+        
+        .whatsapp-description {
+            color: var(--light-text);
+            font-size: 0.95rem;
+        }
+        
+        /* Order Section - Updated Design */
+        .order {
+            padding: 100px 0;
+            background: linear-gradient(rgba(26, 58, 46, 0.9), rgba(26, 58, 46, 0.95)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+        }
+        
+        .order .section-title {
+            color: var(--white);
+        }
+        
+        .order .section-title:after {
+            background: var(--gold);
+        }
+        
+        .order-container {
+            display: flex;
+            max-width: 1000px;
+            margin: 60px auto 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .order-info {
+            flex: 1;
+            padding: 50px;
+            background: rgba(26, 58, 46, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .order-info h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+        
+        .order-info p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .order-details {
+            margin-top: 30px;
+        }
+        
+        .order-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .order-item i {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-right: 15px;
+            width: 30px;
+        }
+        
+        .order-item p {
+            margin: 0;
+            font-size: 1rem;
+        }
+        
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        .whatsapp-btn i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .order-form {
+            flex: 1.5;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--dark-text);
+        }
+        
+        .order-form h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--dark-green);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--dark-green);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            background: rgba(245, 245, 245, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .form-submit {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .form-submit button {
+            background: var(--gold);
+            color: var(--dark-green);
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .form-submit button:hover {
+            background: var(--light-gold);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+        
+        /* Reviews Section */
+        .reviews {
+            padding: 100px 0;
+            background: var(--white);
+        }
+        
+        .reviews-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .review-form-container {
+            background: var(--light-bg);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        
+        .review-form h3 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: var(--dark-green);
+            text-align: center;
+        }
+        
+        .rating-input {
+            margin-bottom: 25px;
+        }
+        
+        .rating-input label {
+            display: block;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: var(--dark-green);
+        }
+        
+        .star-rating {
+            display: flex;
+            font-size: 2rem;
+            color: #ddd;
+        }
+        
+        .star {
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .star:hover,
+        .star.active {
+            color: var(--gold);
+        }
+        
+        .reviews-list {
+            margin-top: 60px;
+        }
+        
+        .review-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .reviewer-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark-green);
+        }
+        
+        .review-rating {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+        
+        .review-date {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        
+        .review-comment {
+            color: var(--light-text);
+            line-height: 1.8;
+        }
+        
+        .no-reviews {
+            text-align: center;
+            padding: 40px;
+            color: var(--light-text);
+            font-style: italic;
+        }
+        
+        /* WhatsApp Floating Sidebar */
+        .whatsapp-sidebar {
+            position: fixed;
+            right: 20px;
+            bottom: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        
+        .whatsapp-float {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+        
+        .whatsapp-float i {
+            color: white;
+            font-size: 28px;
+        }
+        
+        .whatsapp-tooltip {
+            background-color: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+        
+        .whatsapp-sidebar:hover .whatsapp-tooltip {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-green);
+            color: var(--white);
+            padding: 70px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+            color: var(--white);
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--gold);
+        }
+        
+        .footer-column p {
+            margin-bottom: 20px;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--gold);
+            color: var(--dark-green);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .product-content {
+                flex-direction: column;
+            }
+            
+            .product-image {
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+            
+            .product-text {
+                text-align: center;
+            }
+            
+            .order-container {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-tagline {
+                font-size: 1.1rem;
+                white-space: normal;
+                overflow: visible;
+                text-overflow: unset;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .order-info,
+            .order-form {
+                padding: 30px;
+            }
+            
+            .review-form-container {
+                padding: 30px 20px;
+            }
+            
+            .whatsapp-sidebar {
+                right: 15px;
+                bottom: 20px;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .whatsapp-float i {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                Puretress
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#whatsapp-feedback">Customer Feedback</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#order">Order</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Puretress Hair Oil</h1>
+            <div class="hero-tagline">100% Natural Hair Care for Stronger, Thicker, Healthier Hair</div>
+            <a href="#product" class="btn">Discover More</a>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="product" id="product">
+        <div class="container">
+            <h2 class="section-title">Premium Hair Oil</h2>
+            <div class="product-content">
+                <div class="product-image">
+                    <img src="https://z-cdn-media.chatglm.cn/files/edb6b497-872c-4b8f-a593-79e2fdbc1430_WhatsApp%20Image%202025-09-19%20at%2009.48.33_2af37da2.jpg?auth_key=1789795042-6588f55a1e764b41abbd84a78b042342-0-84da8769858fa28c4a696fa4ca537080" alt="Puretress Hair Oil">
+                </div>
+                <div class="product-text">
+                    <h3>Experience Pure Nature</h3>
+                    <p>Puretress Hair Oil is meticulously crafted with the finest natural ingredients to nourish, strengthen, and revitalize your hair. Our exclusive formula penetrates deep into the hair shaft to restore moisture and shine.</p>
+                    <p>Each bottle represents our commitment to excellence and our dedication to providing the ultimate hair care experience for those who demand nothing but the best.</p>
+                    
+                    <div class="product-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>100% Pure Natural Oils</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>6+ Natural Oils & 8+ Herbs</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Stops Hair Fall & Adds Shine</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Boosts New Hair Growth</p>
+                        </div>
+                    </div>
+                    
+                    <div class="price">1000 PKR</div>
+                    <a href="#order" class="btn">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Product Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://z-cdn-media.chatglm.cn/files/30871a57-a657-4b6f-89c2-3d2449fb37bc_WhatsApp%20Image%202025-09-19%20at%2009.50.27_dc5fe521.jpg?auth_key=1789892750-d3b2b10a677a4978a8c4069640889e1b-0-7a474fb5dccb6634a796dbe7a82c2dff" alt="Puretress Hair Oil">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://z-cdn-media.chatglm.cn/files/2cf984aa-f8bf-430d-8112-bf0119945d4f_WhatsApp%20Image%202025-09-19%20at%2009.49.21_138873cc.jpg?auth_key=1789795042-ca16a18a9c074d8a9a6d8c42b041e91e-0-65f9a272689fe3de5a933ef747ed52f0" alt="Puretress Hair Oil">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://z-cdn-media.chatglm.cn/files/4228b9ce-1db6-4024-b7d9-df54a1b9e84c_WhatsApp%20Image%202025-09-19%20at%2009.50.25_11bba4be.jpg?auth_key=1789795042-c40324f3822d4a46a81451ed9da366fb-0-4447eb8a0dcb0efcdc0d5099a4b85c5b" alt="Puretress Hair Oil">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://z-cdn-media.chatglm.cn/files/1b196972-6392-4b56-b8e7-26e4eff4cf48_WhatsApp%20Image%202025-09-19%20at%2009.50.26_44230de2.jpg?auth_key=1789795042-644d4771934b4ec6aaf9ca07cc4e31b9-0-8f4d60705ebb0130cd2ea1014afe9f7d" alt="Puretress Hair Oil">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Natural Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>100% Natural Ingredients</h3>
+                    <p>Our formula contains only the finest natural oils and extracts, free from harmful chemicals and additives.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-magic"></i>
+                    <h3>Deep Nourishment</h3>
+                    <p>Penetrates deep into the hair follicle to provide lasting moisture and essential nutrients.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Luxurious Shine</h3>
+                    <p>Imparts a brilliant, healthy shine to your hair while protecting it from environmental damage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Customer Testimonials</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Puretress Hair Oil has completely transformed my hair. It's never been softer or more manageable. Worth every penny!</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="author-image">
+                        <div class="author-info">
+                            <h4>Ayesha Khan</h4>
+                            <p>Customer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">I've tried countless hair products, but nothing compares to Puretress. The results are simply extraordinary.</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="author-image">
+                        <div class="author-info">
+                            <h4>Ali Ahmed</h4>
+                            <p>Customer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">The scent alone is worth the investment. My hair feels healthier and looks more vibrant than ever before.</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" class="author-image">
+                        <div class="author-info">
+                            <h4>Sara Javed</h4>
+                            <p>Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Feedback Section -->
+    <section class="whatsapp-feedback" id="whatsapp-feedback">
+        <div class="container">
+            <h2 class="section-title">Real Customer Feedback</h2>
+            <div class="whatsapp-grid">
+                <div class="whatsapp-card">
+                    <img src="https://z-cdn-media.chatglm.cn/files/898d5059-717c-4e76-aa5f-d1cc48805535_WhatsApp%20Image%202025-09-18%20at%2010.40.09_390bfc87.jpg?auth_key=1789890923-8f3839736e2e41b5958460afeee03754-0-d355bb42faf293bbcbc94c256633be21" alt="Customer Feedback" class="whatsapp-image">
+                    <div class="whatsapp-content">
+                        <h3 class="whatsapp-title">Hair Transformation</h3>
+                        <p class="whatsapp-description">Customer sharing their experience with Puretress Kaioil for solving hair loss and improving hair quality.</p>
+                    </div>
+                </div>
+                <div class="whatsapp-card">
+                    <img src="https://z-cdn-media.chatglm.cn/files/385049bc-6c36-4d8c-af83-7f78e2c18831_WhatsApp%20Image%202025-09-18%20at%2010.40.11_61f894f4.jpg?auth_key=1789890923-0b0d52e04fa64e24a384785899c72246-0-5856b2c74e0eeb90a1026b38f125c42f" alt="Customer Feedback" class="whatsapp-image">
+                    <div class="whatsapp-content">
+                        <h3 class="whatsapp-title">Amazing Results</h3>
+                        <p class="whatsapp-description">Customer calling our hair oil a "miracle" with excellent results, already finished the first bottle and reordering.</p>
+                    </div>
+                </div>
+                <div class="whatsapp-card">
+                    <img src="https://z-cdn-media.chatglm.cn/files/8ee97ce6-c76d-4168-bf6e-e155993e6a25_WhatsApp%20Image%202025-09-18%20at%2010.40.11_3982f266.jpg?auth_key=1789890923-3544bc7e9c414702af3f3cd1561e9c6b-0-84645d5f74c42f1dddee66b3c30696d6" alt="Customer Feedback" class="whatsapp-image">
+                    <div class="whatsapp-content">
+                        <h3 class="whatsapp-title">Stunning Hair Loss Solution</h3>
+                        <p class="whatsapp-description">Customer amazed by the hair loss treatment results after using the product for over two weeks.</p>
+                    </div>
+                </div>
+                <div class="whatsapp-card">
+                    <img src="https://z-cdn-media.chatglm.cn/files/ee62389e-dbbd-42d0-b573-0700a4e819c6_WhatsApp%20Image%202025-09-18%20at%2010.40.11_94545d8d.jpg?auth_key=1789890923-3e964080d7c84959ab1b6dcc1ddcbeca-0-fdfe9d799472a661a98e03d10bb39139" alt="Customer Feedback" class="whatsapp-image">
+                    <div class="whatsapp-content">
+                        <h3 class="whatsapp-title">Noticeable Shine</h3>
+                        <p class="whatsapp-description">Customer reporting shinier hair after just 2-3 uses of Mena kafi oil and sharing feedback on hair loss issues.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="section-title">Customer Reviews</h2>
+            <div class="reviews-container">
+                <!-- Review Form -->
+                <div class="review-form-container">
+                    <div class="review-form">
+                        <h3>Share Your Experience</h3>
+                        <form id="reviewForm">
+                            <div class="form-group">
+                                <label for="reviewer-name">Your Name</label>
+                                <input type="text" id="reviewer-name" name="name" required>
+                            </div>
+                            
+                            <div class="rating-input">
+                                <label>Rating</label>
+                                <div class="star-rating" id="starRating">
+                                    <span class="star" data-rating="1"><i class="fas fa-star"></i></span>
+                                    <span class="star" data-rating="2"><i class="fas fa-star"></i></span>
+                                    <span class="star" data-rating="3"><i class="fas fa-star"></i></span>
+                                    <span class="star" data-rating="4"><i class="fas fa-star"></i></span>
+                                    <span class="star" data-rating="5"><i class="fas fa-star"></i></span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="review-comment">Your Review</label>
+                                <textarea id="review-comment" name="comment" placeholder="Share your experience with Puretress Hair Oil..." required></textarea>
+                            </div>
+                            
+                            <div class="form-submit">
+                                <button type="submit">Submit Review</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Reviews List -->
+                <div class="reviews-list" id="reviewsList">
+                    <!-- Sample reviews will be displayed here -->
+                    <div class="no-reviews" id="noReviews">
+                        Be the first to share your experience with Puretress Hair Oil!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section - Updated Design -->
+    <section class="order" id="order">
+        <div class="container">
+            <h2 class="section-title">Place Your Order</h2>
+            <div class="order-container">
+                <div class="order-info">
+                    <h3>Order Information</h3>
+                    <p>Ready to experience the magic of Puretress Hair Oil? Fill out the form to place your order or contact us directly using the information below.</p>
+                    
+                    <div class="order-details">
+                        <div class="order-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>puretresshairoil@gmail.com</p>
+                        </div>
+                        <div class="order-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+92 327 0760647</p>
+                        </div>
+                        <div class="order-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Lahore, Pakistan</p>
+                        </div>
+                        <div class="order-item">
+                            <i class="fas fa-clock"></i>
+                            <p>Mon-Fri: 9am - 6pm</p>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/923270760647" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Order on WhatsApp
+                    </a>
+                </div>
+                
+                <div class="order-form">
+                    <h3>Order Form</h3>
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label for="order-name">Full Name</label>
+                            <input type="text" id="order-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="order-email">Email Address</label>
+                            <input type="email" id="order-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="order-phone">Phone Number</label>
+                            <input type="tel" id="order-phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="order-details">Order Details</label>
+                            <textarea id="order-details" name="details" placeholder="Please specify quantity, delivery address, and any special instructions." required></textarea>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit">Place Order</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Puretress</h3>
+                    <p>Natural hair care for those who demand the finest in quality and results.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#product">Our Product</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#whatsapp-feedback">Customer Feedback</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#order">Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> puretresshairoil@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +92 327 0760647</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Puretress Hair Oil. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Sidebar -->
+    <div class="whatsapp-sidebar">
+        <div class="whatsapp-tooltip">Chat with us on WhatsApp</div>
+        <a href="https://wa.me/923270760647" target="_blank" class="whatsapp-float">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Order form submission
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('order-name').value;
+            const email = document.getElementById('order-email').value;
+            const phone = document.getElementById('order-phone').value;
+            const details = document.getElementById('order-details').value;
+            
+            // Create mailto link
+            const mailtoSubject = encodeURIComponent('New Order from ' + name);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nOrder Details:\n${details}`);
+            const mailtoLink = `mailto:puretresshairoil@gmail.com?subject=${mailtoSubject}&body=${body}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Reset form
+            this.reset();
+            
+            // Show confirmation
+            const formSubmit = document.querySelector('.form-submit');
+            const confirmation = document.createElement('p');
+            confirmation.textContent = 'Thank you for your order. We will contact you soon to confirm.';
+            confirmation.style.color = 'var(--dark-green)';
+            confirmation.style.marginTop = '15px';
+            formSubmit.appendChild(confirmation);
+            
+            // Remove confirmation after 5 seconds
+            setTimeout(() => {
+                confirmation.remove();
+            }, 5000);
+        });
+
+        // Star rating functionality
+        const stars = document.querySelectorAll('.star');
+        let selectedRating = 0;
+        
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                selectedRating = parseInt(star.getAttribute('data-rating'));
+                updateStars();
+            });
+            
+            star.addEventListener('mouseover', () => {
+                const hoverRating = parseInt(star.getAttribute('data-rating'));
+                highlightStars(hoverRating);
+            });
+        });
+        
+        document.getElementById('starRating').addEventListener('mouseleave', () => {
+            updateStars();
+        });
+        
+        function updateStars() {
+            stars.forEach((star, index) => {
+                if (index < selectedRating) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+        }
+        
+        function highlightStars(rating) {
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+        }
+
+        // Review form submission
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('reviewer-name').value;
+            const comment = document.getElementById('review-comment').value;
+            
+            // Validate rating
+            if (selectedRating === 0) {
+                alert('Please select a rating');
+                return;
+            }
+            
+            // Create review object
+            const review = {
+                name: name,
+                rating: selectedRating,
+                comment: comment,
+                date: new Date().toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                })
+            };
+            
+            // Add review to the list
+            addReviewToList(review);
+            
+            // Reset form
+            this.reset();
+            selectedRating = 0;
+            updateStars();
+            
+            // Show confirmation
+            const formSubmit = document.querySelector('#reviewForm .form-submit');
+            const confirmation = document.createElement('p');
+            confirmation.textContent = 'Thank you for your review!';
+            confirmation.style.color = 'var(--dark-green)';
+            confirmation.style.marginTop = '15px';
+            confirmation.style.textAlign = 'center';
+            formSubmit.appendChild(confirmation);
+            
+            // Remove confirmation after 5 seconds
+            setTimeout(() => {
+                confirmation.remove();
+            }, 5000);
+        });
+
+        // Function to add review to the list
+        function addReviewToList(review) {
+            const reviewsList = document.getElementById('reviewsList');
+            const noReviews = document.getElementById('noReviews');
+            
+            // Hide "no reviews" message if it exists
+            if (noReviews) {
+                noReviews.style.display = 'none';
+            }
+            
+            // Create review card
+            const reviewCard = document.createElement('div');
+            reviewCard.className = 'review-card';
+            
+            // Create star rating HTML
+            let starsHtml = '';
+            for (let i = 1; i <= 5; i++) {
+                if (i <= review.rating) {
+                    starsHtml += '<i class="fas fa-star"></i>';
+                } else {
+                    starsHtml += '<i class="far fa-star"></i>';
+                }
+            }
+            
+            // Set review card HTML
+            reviewCard.innerHTML = `
+                <div class="review-header">
+                    <div class="reviewer-name">${review.name}</div>
+                    <div class="review-rating">${starsHtml}</div>
+                </div>
+                <div class="review-date">${review.date}</div>
+                <div class="review-comment">${review.comment}</div>
+            `;
+            
+            // Add review to the top of the list
+            reviewsList.insertBefore(reviewCard, reviewsList.firstChild);
+        }
+
+        // Add some sample reviews on page load
+        window.addEventListener('load', () => {
+            const sampleReviews = [
+                {
+                    name: "Fatima Ali",
+                    rating: 5,
+                    comment: "This hair oil is amazing! My hair has never been healthier. I've been using it for a month now and the results are incredible.",
+                    date: new Date(Date.now() - 86400000 * 5).toLocaleDateString('en-US', { 
+                        year: 'numeric', 
+                        month: 'long', 
+                        day: 'numeric' 
+                    })
+                },
+                {
+                    name: "Ahmed Hassan",
+                    rating: 4,
+                    comment: "Great product! It really helped with my hair fall issue. The only downside is the price, but it's worth it for the quality.",
+                    date: new Date(Date.now() - 86400000 * 12).toLocaleDateString('en-US', { 
+                        year: 'numeric', 
+                        month: 'long', 
+                        day: 'numeric' 
+                    })
+                },
+                {
+                    name: "Sara Khan",
+                    rating: 5,
+                    comment: "I love the natural fragrance and how it makes my hair so shiny. Will definitely buy again!",
+                    date: new Date(Date.now() - 86400000 * 20).toLocaleDateString('en-US', { 
+                        year: 'numeric', 
+                        month: 'long', 
+                        day: 'numeric' 
+                    })
+                }
+            ];
+            
+            // Add sample reviews to the list
+            sampleReviews.forEach(review => {
+                addReviewToList(review);
+            });
+        });
+    </script>
+</body>
+</html>
